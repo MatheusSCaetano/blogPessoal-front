@@ -18,7 +18,7 @@ export class AlertasService {
   }
 
   showAlertDanger(message:string){
-    this.showAlert(message, 'string')
+    this.showAlert(message, 'danger')
   }
 
   showAlertInfo(message:string){
