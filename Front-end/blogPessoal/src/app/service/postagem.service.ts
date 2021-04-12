@@ -34,6 +34,10 @@ getByIdPostagem(id: number): Observable<Postagem>{
   return this.http.get<Postagem>(`http://localhost:8080/postagens/${id}`,this.token)
 }
 
+getByTitulo(s:string):Observable<Postagem[]>{
+  return this.http.get<Postagem[]>(`http://localhost:8080/postagens/titulo/${s}`,this.token)
+}
+
 deletePostagem(id: number){
   return this.http.delete(`http://localhost:8080/postagens/${id}`,this.token)
 }
